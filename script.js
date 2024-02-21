@@ -15,12 +15,3 @@ const displayContactPage = () => {
 contactPageBtn.addEventListener("click", () => {
     displayContactPage();
 })
-
-
-
-
-
-
-
-//on injecte le code dans la section contact mais on la rend invisible
-//au on click du btn contact ça affiche la section contact
