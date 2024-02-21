@@ -111,7 +111,7 @@ window.addEventListener('load', async () => {
         displayContactPage();
     })
 
-    //------------Episodes Page ------------------
+    //------------Presentation Page ------------------
     let presentationPageBtn = document.querySelector('.presentation');
 
     const displayPresentationPage = () => {
@@ -125,5 +125,22 @@ window.addEventListener('load', async () => {
 
     presentationPageBtn.addEventListener("click", () => {
         displayPresentationPage();
+    })
+
+    //------------Landing Page ------------------
+    let landingPageBtn = document.querySelector('.landing');
+
+    const displayLandingPage = () => {
+        hydratePage.className="landing";
+        hydratePage.innerHTML = 
+        `<div>
+        <img src="./assets/landing_img.jpg" alt="image du manga The Promised Neverland">
+        <p>Emma et ses frères et sœurs, tous orphelins, ont été placés dans un établissement spécialisé lorsqu'ils étaient tout jeunes. Bien que leur liberté soit limitée et que les règles soient parfois un peu strictes, les enfants mènent une vie heureuse à Grace Field House, et la femme qu'ils nomment « Maman » s'occupe d'eux et leur offre tout l'amour qu'une mère pourrait offrir à ses enfants. Un soir, après le départ d'une fille appelé Conny, Emma et Norman découvrent que les enfants de cet orphelinat sont en réalité du bétail. Ils sont élevés dans une ferme à l'allure d'orphelinat, et livrés à des monstres avec le consentement de « Maman ». Ils devront faire preuve d'ingéniosité pour survivre et tenter de s'échapper.</p>
+        <button>Découvrir</button>
+        </div>`
+    }
+
+    landingPageBtn.addEventListener("click", () => {
+        displayLandingPage();
     })
 });
