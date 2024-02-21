@@ -52,8 +52,8 @@ nav img {
     
     cursor: pointer;
     
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
+    opacity: 0; 
+    z-index: 2;
     
     -webkit-touch-callout: none;
 }
@@ -101,15 +101,12 @@ nav img {
     width: 200px;
     height: 0;
     overflow: hidden;
-    top: 40px;
+    top: 38px;
     left: -150px;
     background: #ededed;
     list-style-type: none;
     transition: 0.5s;
-    -webkit-font-smoothing: antialiased;
 }
-
-
 
 #menu li {
     padding: 10px 0;
