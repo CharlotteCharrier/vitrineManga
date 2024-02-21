@@ -3,6 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* CSS de la page présentation */
+#presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#presentation img {
+    max-height: 300px;
+}
+
+#presentation img:last-of-type {
+    max-height: 100px;
+}
+
+#presentation p {
+    margin: 20px;
+    text-align: justify;
+}
+
 body {
     background-color: rgb(243, 243, 243);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
