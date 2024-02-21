@@ -5,7 +5,7 @@
 }
 
 /* CSS de la page présentation */
-.presentation {
+.presentation div {
     display: flex;
     justify-content: center;
     align-items: center;

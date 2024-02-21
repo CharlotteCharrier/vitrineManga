@@ -38,10 +38,6 @@ nav img {
     color: #394b56;
 }
 
-/* #menu-toggle input {
-    appearance: none;
-} */
-
 #menu-toggle input {
     display: block;
     width: 40px;
@@ -92,6 +88,10 @@ nav img {
 
 #menu-toggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu.closed {
+    height: 0;
 }
 
 #menu {
