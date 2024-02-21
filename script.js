@@ -1,4 +1,3 @@
-let resultContactPage = document.querySelector('body');
 let contactPageBtn = document.querySelector('.contact');
 let contactPage = document.querySelector('#contact');
 
