@@ -7,7 +7,10 @@ const displayContactPage = () => {
             <input type="text" placeholder="Nom - Prénom">
             <input type="text" placeholder="Adresse mail">
             <input type="text" placeholder="Votre message">
+            <div>
+            <img src="./assets/contact_img.png">
             <button type="submit">Envoyer</button>
+            </div>
         </form>`
 } 
 

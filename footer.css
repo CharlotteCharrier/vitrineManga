@@ -1,12 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background-color:#5c8c7e;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
