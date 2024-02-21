@@ -15,7 +15,7 @@ body {
 .slider {
     position: relative;
     overflow: hidden;
-    width:  300px;
+   
 }
 
 .couv {
@@ -24,10 +24,12 @@ body {
     margin: auto;
     display: none;
     transition: 0.5s;
+    margin: auto;
 }
 
 .couv img {
     margin: auto;
+    max-width: 300px;
 }
 .couv.active {
     display: flex;
