@@ -18,6 +18,14 @@ body {
    
 }
 
+.abstract{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
 .couv {
     height: 300px;
     z-index: 1;
