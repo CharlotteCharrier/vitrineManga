@@ -5,22 +5,22 @@
 }
 
 /* CSS de la page présentation */
-#presentation {
+.presentation {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#presentation img {
+.presentation img {
     max-height: 300px;
 }
 
-#presentation img:last-of-type {
+.presentation img:last-of-type {
     max-height: 100px;
 }
 
-#presentation p {
+.presentation p {
     margin: 20px;
     text-align: justify;
 }
