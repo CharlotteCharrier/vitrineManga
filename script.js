@@ -2,7 +2,7 @@ window.addEventListener('load', async () => {
     //------------Episodes Page ------------------
     const dataUrl = "./assets/data.json";
     const episodesPageBtn = document.querySelector('.episodes');
-    const episodesPage = document.getElementById('episodes');
+    const hydratePage = document.getElementById('application');
 
     //------------Episodes Page ------------------
     episodesPageBtn.addEventListener('click', async () => {
@@ -41,7 +41,7 @@ window.addEventListener('load', async () => {
                 return divs;
             }
 
-            episodesPage.innerHTML = `
+            hydratePage.innerHTML = `
                 <div class="slider">
                     <article class="abstract">
                         <button id="prev">&#10094;</button>
@@ -91,14 +91,14 @@ window.addEventListener('load', async () => {
             console.error('Une erreur s\'est produite :', error);
         }
     }
-});
 
 // Affichage de la page contact
-let contactPageBtn = document.querySelector('.contact');
-let contactPage = document.querySelector('#contact');
+
+    let contactPageBtn = document.querySelector('.contact');
 
 const displayContactPage = () => {
-    contactPage.innerHTML = 
+    hydratePage.className="contact";
+    hydratePage.innerHTML = 
         `<form method="post">
             <input type="text" placeholder="Nom - Prénom">
             <input type="text" placeholder="Adresse mail">
@@ -111,8 +111,6 @@ const displayContactPage = () => {
 contactPageBtn.addEventListener("click", () => {
     displayContactPage();
 })
-
-
 
 // Affichage de la page présentation
 let presentationPageBtn = document.querySelector('.presentation');
@@ -128,3 +126,4 @@ const displayPresentationPage = () => {
 presentationPageBtn.addEventListener("click", () => {
     displayPresentationPage();
 })
+});
