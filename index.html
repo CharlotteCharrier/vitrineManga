@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-nav.css">
     <link rel="stylesheet" href="footer.css">
     <script defer src="script.js"></script>
     <!-- <script defer src="scriptHeader.js"></script> -->
@@ -12,27 +13,19 @@
 </head>
 <header>
     <nav id="nav">
-        <input id="menu-toggle" type="checkbox">
-        <div class="nav-container">
-            <img src="./assets/logo.png" alt="The Promised Neverland">
-            <label class="menu-button-container" for="menu-toggle">
-                <span class="menu-button"></span>
-            </label>
+        <img src="./assets/logo.png" alt="The Promised Neverland">
+        <div id="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                    <a href="./index.html"><li>Accueil</li></a>
+                    <a href="./presentation.html"><li>Présentation</li></a>
+                    <a href="#"><li>Episodes</li></a>
+                    <a href="./contact.html"><li>Contact</li></a>
+            </ul>
         </div>
-        <ul class="menu">
-            <li>
-                <a href="./index.html">Accueil</a>
-            </li>
-            <li>
-                <a href="./presentation.html">Présentation</a>
-            </li>
-            <li>
-                <a href="#">Episodes</a>
-            </li>
-            <li>
-                <a href="./contact.html">Contact</a>
-            </li>
-        </ul>
     </nav>
 </header>
 <body>
@@ -40,6 +33,12 @@
         <img alt="image du manga The Promised Neverland">
         <button>Découvrir</button>
     </section>
+    <div class="rose"></div>
+    <div class="vert"></div>
+    <div class="bleu"></div>
+    <div class="jauneFonce"></div>
+    <div class="jauneClair"></div>
+    <div class="violet"></div>
 </body>
 <footer class="footer">
 </footer>
