@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* CSS de la page présentation */
+/*-------Presentation Page --------------*/
 .presentation {
     display: flex;
     justify-content: center;
@@ -121,6 +121,33 @@ body {
     margin-right: auto;
 }
 
+/*-------Landing Page --------------*/
+
+.landing div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing img{
+    width: 100%;
+}
+
+.landing p {
+    margin: 30px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.landing button {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #153043ff;
+    color: white;
+    height: 30px;
+    margin-bottom: 20px;
+}
 
 /* 
 .gris {
