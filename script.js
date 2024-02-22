@@ -1,5 +1,5 @@
 window.addEventListener('load', async () => {
-    //-----------déclarations---------------------
+    //-----------Declarations---------------------
     let landingPageBtn = document.querySelector('.landing');
     const dataUrl = "./assets/data.json";
     const episodesPageBtn = document.querySelector('.episodes');
@@ -7,7 +7,7 @@ window.addEventListener('load', async () => {
     let contactPageBtn = document.querySelector('.contact');
     let presentationPageBtn = document.querySelector('.presentation');
 
-    //------------Ecouteurs boutons---------------
+    //------------Listeners---------------
     landingPageBtn.addEventListener("click", () => {
         displayLandingPage();
     })
@@ -24,17 +24,7 @@ window.addEventListener('load', async () => {
         displayContactPage();
     })
 
-    
     //------------Episodes Page ------------------
-    /* const dataUrl = "./assets/data.json";
-    const episodesPageBtn = document.querySelector('.episodes');
-    const hydratePage = document.getElementById('application');
- */
-    //------------Episodes Page ------------------
-   /*  episodesPageBtn.addEventListener('click', async () => {
-        await setEpisodesPage();
-    }); */
-
     const setEpisodesPage = async () => {
         try {
             const response = await fetch(dataUrl);
@@ -119,7 +109,6 @@ window.addEventListener('load', async () => {
     }
 
     //------------Contact Page ------------------
-    // let contactPageBtn = document.querySelector('.contact');
 
     const displayContactPage = () => {
         hydratePage.className = "contact";
@@ -133,12 +122,7 @@ window.addEventListener('load', async () => {
             </form>`
     }
 
-    /* contactPageBtn.addEventListener("click", () => {
-        displayContactPage();
-    }) */
-
     //------------Presentation Page ------------------
-    // let presentationPageBtn = document.querySelector('.presentation');
 
     const displayPresentationPage = () => {
         hydratePage.className = "presentation";
@@ -149,12 +133,8 @@ window.addEventListener('load', async () => {
         </div>`
     }
 
-   /*  presentationPageBtn.addEventListener("click", () => {
-        displayPresentationPage();
-    }) */
-
-    //------------Landing Page ------------------
-    // let landingPageBtn = document.querySelector('.landing');
+    //------------Landing Page is Accueil-----------------
+  
 
     const displayLandingPage = () => {
         hydratePage.className = "landing";
@@ -170,10 +150,6 @@ window.addEventListener('load', async () => {
     //------------Footer------------------
     let footer = document.querySelector('.footer');
     footer.innerHTML = '<p>Charlot(te)</p>';
-    if(hydratePage.classList = "contact") {
-        footer.classList.add("footerContact");
-    } else {
-        footer.classList.remove("footerContact");
-    }
+  
 
 });
