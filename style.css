@@ -149,6 +149,19 @@ body {
     margin-bottom: 20px;
 }
 
+/* -------CSS Footer-------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:#5c8c7e;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #222b30;
+}
+
 /* 
 .gris {
     background-color: #394b56;
