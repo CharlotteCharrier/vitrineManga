@@ -287,12 +287,68 @@ footer {
     body {
         font-size: 1.5em;
     }
-
+    
     section p {
         padding: 20px;
     }
+
+    /* -----Navbar------ */
+    nav {
+        height: 100px;
+    }
+
+    nav input, nav span {
+        display: none;
+    }
+
+    #menu {
+        flex-direction: row;
+        position: initial;
+        width: 451px;
+        overflow: visible;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #menu li {
+        font-size: 1em;
+    }
+
+    /* -----presentation page------ */
+    .presentation img, .presentation img:last-of-type {
+        max-height: 400px;
+    }
+
+    /* ------contact page------- */
+    .contact img {
+        height: 500px;
+    }
+    .contact input {
+        height: 40px;
+        padding : 15px;
+        margin: 10px;
+    }
+    
+    .contact input:last-of-type {
+        padding-bottom : 100px;
+    }
+    
+    .contact button {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #153043ff;
+        color: white;
+        height: 40px;
+        width: 80px;
+    }
 }
 
+@media (min-width: 1024px) {
+    .landing img {
+        max-height: 700px;
+        max-width: fit-content;
+    }
+}
 
 /* 
 0 - 600px: Phone

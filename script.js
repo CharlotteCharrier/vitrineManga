@@ -164,6 +164,4 @@ window.addEventListener('load', async () => {
     //------------Footer------------------
     let footer = document.querySelector('.footer');
     footer.innerHTML = '<p>Charlot(te)</p>';
-
-
 });
