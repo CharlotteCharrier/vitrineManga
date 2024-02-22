@@ -1,3 +1,6 @@
+/**
+ * Add event listener when the window is fully loaded
+ */
 window.addEventListener('load', async () => {
     //-----------Declarations---------------------
     let landingPageBtn = document.querySelector('.landing');
@@ -9,34 +12,51 @@ window.addEventListener('load', async () => {
     let menuBurger = document.getElementById('menu-toggle');
 
     //------------Listeners---------------
+    /**
+     * Listen for focusout event on the menu burger icon to close the menu if focus moves outside
+     * @param {Event} e - The focusout event object
+     */
     menuBurger.addEventListener("focusout", (e) => {
         if (!e.relatedTarget) {
             menuBurger.querySelector('input').checked = false;
         }
     })
-
+    /**
+     * Listen for click event on the landing page button
+     */
     landingPageBtn.addEventListener("click", () => {
         displayLandingPage();
     })
-
+    /**
+     * Listen for click event on the presentation page button
+     */
     presentationPageBtn.addEventListener("click", () => {
         displayPresentationPage();
     })
-
+    /**
+     * Listen for click event on the episodes page button
+     */
     episodesPageBtn.addEventListener('click', async () => {
         setEpisodesPage();
     });
-
+    /**
+     * Listen for click event on the contact page button
+     */
     contactPageBtn.addEventListener("click", () => {
         displayContactPage();
     })
 
     //------------Episodes Page ------------------
+    /**
+    * Set up the episodes page by fetching data and creating a slider
+    */
     const setEpisodesPage = async () => {
         try {
             const response = await fetch(dataUrl);
             const jsonData = await response.json();
-
+            /**
+            * Create the slider with fetched data
+            */
             const makeSlider = () => {
                 let divs = [];
                 jsonData.forEach((episode, index) => {
@@ -63,6 +83,7 @@ window.addEventListener('load', async () => {
                 });
                 return divs;
             }
+            // Populate the slider with episodes
             hydratePage.className = "slider";
             hydratePage.innerHTML = `
                 <div class="slider">
@@ -72,10 +93,9 @@ window.addEventListener('load', async () => {
                         <button id="next">&#10095;</button>
                         <hr>
                     </article>
-                   
                 </div>
             `;
-
+            // Slider functionality
             const divArray = document.querySelectorAll('.couv');
             const btns = document.querySelectorAll('button');
             let currentIndex = 0;
@@ -116,7 +136,9 @@ window.addEventListener('load', async () => {
     }
 
     //------------Contact Page ------------------
-
+    /**
+    * Display the contact page
+    */
     const displayContactPage = () => {
         hydratePage.className = "contact";
         hydratePage.innerHTML =
@@ -130,7 +152,9 @@ window.addEventListener('load', async () => {
     }
 
     //------------Presentation Page ------------------
-
+    /**
+    * Display the presentation page
+    */
     const displayPresentationPage = () => {
         hydratePage.className = "presentation";
         hydratePage.innerHTML =
@@ -141,8 +165,9 @@ window.addEventListener('load', async () => {
     }
 
     //------------Landing Page is Accueil-----------------
-
-
+    /**
+    * Display the landing page
+    */
     const displayLandingPage = () => {
         hydratePage.className = "landing";
         hydratePage.innerHTML =
@@ -151,19 +176,16 @@ window.addEventListener('load', async () => {
         <p>Emma et ses frères et sœurs, tous orphelins, ont été placés dans un établissement spécialisé lorsqu'ils étaient tout jeunes. Bien que leur liberté soit limitée et que les règles soient parfois un peu strictes, les enfants mènent une vie heureuse à Grace Field House, et la femme qu'ils nomment « Maman » s'occupe d'eux et leur offre tout l'amour qu'une mère pourrait offrir à ses enfants. Un soir, après le départ d'une fille appelée Conny, Emma et Norman découvrent que les enfants de cet orphelinat sont en réalité du bétail. Ils sont élevés dans une ferme à l'allure d'orphelinat, et livrés à des monstres avec le consentement de « Maman ». Ils devront faire preuve d'ingéniosité pour survivre et tenter de s'échapper.</p>
         <button id="discoverBtn">Découvrir</button>
         </div>`;
-        
-       
-    }
-    displayLandingPage();
 
-    const discoverBtn = document.getElementById('discoverBtn');
-    discoverBtn.addEventListener('click', () => {
-        displayPresentationPage();
-    });
+        const discoverBtn = document.getElementById('discoverBtn');
+        discoverBtn.addEventListener('click', () => {
+            displayPresentationPage();
+        });
+    }
+    // Display the landing page when the page is loaded the first time
+    displayLandingPage();
 
     //------------Footer------------------
     let footer = document.querySelector('.footer');
     footer.innerHTML = '<p>Charlot(te)</p>';
-
-
 });
