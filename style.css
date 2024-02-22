@@ -219,6 +219,7 @@ footer {
 .couv img {
     max-width: 100%;
     margin: 0 auto;
+    width: 33vw;
 }
 
 .couv h2,
@@ -243,12 +244,12 @@ footer {
 }
 
 #prev {
-    left: 0px;
+    left: calc( 33vw - 28px );
     margin-left: auto;
 }
 
 #next {
-    right: 0px;
+    right: calc( 33vw - 28px );
     margin-right: auto;
 }
 
