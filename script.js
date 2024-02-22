@@ -126,7 +126,7 @@ window.addEventListener('load', async () => {
         hydratePage.innerHTML =
             `<form method="post">
                 <input type="text" placeholder="Nom - Prénom">
-                <input type="text" placeholder="Adresse mail">
+                <input type="email" placeholder="Adresse mail">
                 <input type="text" placeholder="Votre message">
                 <button type="submit">Envoyer</button>
                 <img src="./assets/contact_img.png">
@@ -166,11 +166,14 @@ window.addEventListener('load', async () => {
         </div>`
     }
     displayLandingPage();
-    /* landingPageBtn.addEventListener("click", () => {
-        displayLandingPage();
-    }) */
-});
+  
+    //------------Footer------------------
+    let footer = document.querySelector('.footer');
+    footer.innerHTML = '<p>Charlot(te)</p>';
+    if(hydratePage.classList = "contact") {
+        footer.classList.add("footerContact");
+    } else {
+        footer.classList.remove("footerContact");
+    }
 
-// 1 - affichage par défaut page accueil : fait, ok en ajoutant l'appel displayLandigPage en dehors de l'écouteur bouton ligne 142
-// 2 - je déplace les déclarations de variables en haut du fichier
-// 3 - je déplace tous les écouteurs boutons en haut du fichier
+});
