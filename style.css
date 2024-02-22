@@ -6,9 +6,10 @@
 
 body {
     background-color: rgb(243, 243, 243);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-} 
 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0 0 50px 0;
+} 
 
 /* -----Navbar-------*/
 nav {
@@ -133,11 +134,10 @@ footer {
     align-items: flex-end;
     background-color:#5c8c7e;
     padding: 10px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     color: #222b30;
-    float: inline-end;
 }
 
 /*-------Presentation Page --------------*/
