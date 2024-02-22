@@ -137,6 +137,10 @@ footer {
     color: #222b30;
 }
 
+.footerContact {
+    position: absolute;
+}
+
 /*-------Presentation Page --------------*/
 .presentation div {
     display: flex;
