@@ -293,6 +293,10 @@ footer {
         padding: 20px;
     }
 
+    /* -----Landing------*/
+    .landing button {
+        scale: 1.5;
+    }
     /* -----Navbar------ */
     nav {
         height: 100px;
