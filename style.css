@@ -19,6 +19,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
+    padding: 0 5%;
 }
 
 nav img {
@@ -302,7 +303,7 @@ footer {
         height: 100px;
     }
 
-    nav input, nav span {
+    nav input, #menu-toggle span {
         display: none;
     }
 
@@ -349,16 +350,15 @@ footer {
 }
 
 @media (min-width: 1024px) {
+
+/* ----Landing page----- */
     .landing img {
         max-height: 700px;
         max-width: fit-content;
     }
-}
 
-/* 
-0 - 600px: Phone
-600 - 900px: Tablet portrait
-900 - 1200px: Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + : Big desktop
- */
+/* ----Contact page----- */
+    .contact input {
+        width: 600px;
+    }
+}
