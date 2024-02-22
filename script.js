@@ -1,13 +1,39 @@
 window.addEventListener('load', async () => {
-    //------------Episodes Page ------------------
+    //-----------déclarations---------------------
+    let landingPageBtn = document.querySelector('.landing');
     const dataUrl = "./assets/data.json";
     const episodesPageBtn = document.querySelector('.episodes');
     const hydratePage = document.getElementById('application');
+    let contactPageBtn = document.querySelector('.contact');
+    let presentationPageBtn = document.querySelector('.presentation');
 
-    //------------Episodes Page ------------------
+    //------------Ecouteurs boutons---------------
+    landingPageBtn.addEventListener("click", () => {
+        displayLandingPage();
+    })
+
+    presentationPageBtn.addEventListener("click", () => {
+        displayPresentationPage();
+    })
+
     episodesPageBtn.addEventListener('click', async () => {
-        await setEpisodesPage();
+         setEpisodesPage();
     });
+
+    contactPageBtn.addEventListener("click", () => {
+        displayContactPage();
+    })
+
+    
+    //------------Episodes Page ------------------
+    /* const dataUrl = "./assets/data.json";
+    const episodesPageBtn = document.querySelector('.episodes');
+    const hydratePage = document.getElementById('application');
+ */
+    //------------Episodes Page ------------------
+   /*  episodesPageBtn.addEventListener('click', async () => {
+        await setEpisodesPage();
+    }); */
 
     const setEpisodesPage = async () => {
         try {
@@ -40,7 +66,7 @@ window.addEventListener('load', async () => {
                 });
                 return divs;
             }
-
+            hydratePage.className = "slider";
             hydratePage.innerHTML = `
                 <div class="slider">
                     <article class="abstract">
@@ -93,7 +119,7 @@ window.addEventListener('load', async () => {
     }
 
     //------------Contact Page ------------------
-    let contactPageBtn = document.querySelector('.contact');
+    // let contactPageBtn = document.querySelector('.contact');
 
     const displayContactPage = () => {
         hydratePage.className = "contact";
@@ -107,12 +133,12 @@ window.addEventListener('load', async () => {
             </form>`
     }
 
-    contactPageBtn.addEventListener("click", () => {
+    /* contactPageBtn.addEventListener("click", () => {
         displayContactPage();
-    })
+    }) */
 
     //------------Presentation Page ------------------
-    let presentationPageBtn = document.querySelector('.presentation');
+    // let presentationPageBtn = document.querySelector('.presentation');
 
     const displayPresentationPage = () => {
         hydratePage.className = "presentation";
@@ -123,24 +149,28 @@ window.addEventListener('load', async () => {
         </div>`
     }
 
-    presentationPageBtn.addEventListener("click", () => {
+   /*  presentationPageBtn.addEventListener("click", () => {
         displayPresentationPage();
-    })
+    }) */
 
     //------------Landing Page ------------------
-    let landingPageBtn = document.querySelector('.landing');
+    // let landingPageBtn = document.querySelector('.landing');
 
     const displayLandingPage = () => {
         hydratePage.className = "landing";
         hydratePage.innerHTML =
             `<div>
         <img src="./assets/landing_img.jpg" alt="image du manga The Promised Neverland">
-        <p>Emma et ses frères et sœurs, tous orphelins, ont été placés dans un établissement spécialisé lorsqu'ils étaient tout jeunes. Bien que leur liberté soit limitée et que les règles soient parfois un peu strictes, les enfants mènent une vie heureuse à Grace Field House, et la femme qu'ils nomment « Maman » s'occupe d'eux et leur offre tout l'amour qu'une mère pourrait offrir à ses enfants. Un soir, après le départ d'une fille appelé Conny, Emma et Norman découvrent que les enfants de cet orphelinat sont en réalité du bétail. Ils sont élevés dans une ferme à l'allure d'orphelinat, et livrés à des monstres avec le consentement de « Maman ». Ils devront faire preuve d'ingéniosité pour survivre et tenter de s'échapper.</p>
+        <p>Emma et ses frères et sœurs, tous orphelins, ont été placés dans un établissement spécialisé lorsqu'ils étaient tout jeunes. Bien que leur liberté soit limitée et que les règles soient parfois un peu strictes, les enfants mènent une vie heureuse à Grace Field House, et la femme qu'ils nomment « Maman » s'occupe d'eux et leur offre tout l'amour qu'une mère pourrait offrir à ses enfants. Un soir, après le départ d'une fille appelée Conny, Emma et Norman découvrent que les enfants de cet orphelinat sont en réalité du bétail. Ils sont élevés dans une ferme à l'allure d'orphelinat, et livrés à des monstres avec le consentement de « Maman ». Ils devront faire preuve d'ingéniosité pour survivre et tenter de s'échapper.</p>
         <button>Découvrir</button>
         </div>`
     }
     displayLandingPage();
-    landingPageBtn.addEventListener("click", () => {
+    /* landingPageBtn.addEventListener("click", () => {
         displayLandingPage();
-    })
+    }) */
 });
+
+// 1 - affichage par défaut page accueil : fait, ok en ajoutant l'appel displayLandigPage en dehors de l'écouteur bouton ligne 142
+// 2 - je déplace les déclarations de variables en haut du fichier
+// 3 - je déplace tous les écouteurs boutons en haut du fichier
