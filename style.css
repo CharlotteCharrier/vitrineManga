@@ -239,7 +239,6 @@ footer {
     padding: 10px;
     border: none;
     cursor: pointer;
-    z-index: 2;
     position: absolute;
     transform: translateY(-50%);
 }
