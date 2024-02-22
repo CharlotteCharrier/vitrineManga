@@ -6,8 +6,15 @@ window.addEventListener('load', async () => {
     const hydratePage = document.getElementById('application');
     let contactPageBtn = document.querySelector('.contact');
     let presentationPageBtn = document.querySelector('.presentation');
+    let menuBurger = document.getElementById('menu-toggle');
 
     //------------Listeners---------------
+    menuBurger.addEventListener("focusout", (e) => {
+        if (!e.relatedTarget) {
+            menuBurger.querySelector('input').checked = false;
+        }
+    })
+
     landingPageBtn.addEventListener("click", () => {
         displayLandingPage();
     })
@@ -17,7 +24,7 @@ window.addEventListener('load', async () => {
     })
 
     episodesPageBtn.addEventListener('click', async () => {
-         setEpisodesPage();
+        setEpisodesPage();
     });
 
     contactPageBtn.addEventListener("click", () => {
@@ -134,7 +141,7 @@ window.addEventListener('load', async () => {
     }
 
     //------------Landing Page is Accueil-----------------
-  
+
 
     const displayLandingPage = () => {
         hydratePage.className = "landing";
@@ -142,14 +149,21 @@ window.addEventListener('load', async () => {
             `<div>
         <img src="./assets/landing_img.jpg" alt="image du manga The Promised Neverland">
         <p>Emma et ses frères et sœurs, tous orphelins, ont été placés dans un établissement spécialisé lorsqu'ils étaient tout jeunes. Bien que leur liberté soit limitée et que les règles soient parfois un peu strictes, les enfants mènent une vie heureuse à Grace Field House, et la femme qu'ils nomment « Maman » s'occupe d'eux et leur offre tout l'amour qu'une mère pourrait offrir à ses enfants. Un soir, après le départ d'une fille appelée Conny, Emma et Norman découvrent que les enfants de cet orphelinat sont en réalité du bétail. Ils sont élevés dans une ferme à l'allure d'orphelinat, et livrés à des monstres avec le consentement de « Maman ». Ils devront faire preuve d'ingéniosité pour survivre et tenter de s'échapper.</p>
-        <button>Découvrir</button>
-        </div>`
+        <button id="discoverBtn">Découvrir</button>
+        </div>`;
+        
+       
     }
     displayLandingPage();
-  
+
+    const discoverBtn = document.getElementById('discoverBtn');
+    discoverBtn.addEventListener('click', () => {
+        displayPresentationPage();
+    });
+
     //------------Footer------------------
     let footer = document.querySelector('.footer');
     footer.innerHTML = '<p>Charlot(te)</p>';
-  
+
 
 });
