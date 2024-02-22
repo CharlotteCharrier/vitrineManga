@@ -6,8 +6,9 @@
 
 body {
     background-color: rgb(243, 243, 243);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+} 
+
 
 /* -----Navbar-------*/
 nav {
@@ -137,10 +138,6 @@ footer {
     width: 100%;
     color: #222b30;
     float: inline-end;
-}
-
-.footerContact {
-    position: absolute;
 }
 
 /*-------Presentation Page --------------*/
@@ -282,3 +279,25 @@ footer {
     height: 30px;
     margin-bottom: 20px;
 }
+
+/* -----------Media queries------------- */
+
+/* Pour les écrans de plus de 900px */
+@media (min-width: 901px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    section p {
+        padding: 20px;
+    }
+}
+
+
+/* 
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+ */
