@@ -4,6 +4,139 @@
     box-sizing: border-box;
 }
 
+/* -----Navbar-------*/
+nav {
+    background-color: #5c8c7e;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+nav img {
+    height: 80%;
+    position: relative;
+    margin-left: 5px;
+}
+
+#menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menu-toggle a {
+    text-decoration: none;
+    color: #407444;
+    transition: color 0.3s ease;
+}
+
+#menu-toggle a:hover {
+    color: #394b56;
+}
+
+#menu-toggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; 
+    z-index: 2;
+    
+    -webkit-touch-callout: none;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menu-toggle span:first-child {
+    transform-origin: 0 0;
+}
+
+#menu-toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menu-toggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menu-toggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menu-toggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu.closed {
+    height: 0;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    top: 38px;
+    left: -147px;
+    background: #ededed;
+    list-style-type: none;
+    transition: 0.5s;
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    color: #222b30;
+}
+
+#menu-toggle input:checked ~ #menu {
+    height: auto; 
+    background-color: #5c8c7e;
+    text-align: center;
+ }
+
+#menu-toggle input:checked~ul {
+    transform: none;
+}
+
+/* -------Footer-------- */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:#5c8c7e;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: #222b30;
+}
+
 /*-------Presentation Page --------------*/
 .presentation div {
     display: flex;
@@ -147,19 +280,6 @@ body {
     color: white;
     height: 30px;
     margin-bottom: 20px;
-}
-
-/* -------CSS Footer-------- */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color:#5c8c7e;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    color: #222b30;
 }
 
 /* 
