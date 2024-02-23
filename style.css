@@ -38,7 +38,7 @@ nav img {
 
 #menu-toggle a {
     text-decoration: none;
-    color: #407444;
+    color: #faef8d;
     transition: color 0.3s ease;
 }
 
@@ -64,7 +64,7 @@ nav img {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: #faef8d;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
