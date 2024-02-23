@@ -184,8 +184,4 @@ window.addEventListener('load', async () => {
     }
     // Display the landing page when the page is loaded the first time
     displayLandingPage();
-
-    //------------Footer------------------
-    let footer = document.querySelector('.footer');
-    footer.innerHTML = '<p>Charlot(te)</p>';
 });
