@@ -285,7 +285,7 @@ footer {
 
 /* Pour les écrans de plus de 900px */
 @media (min-width: 901px) {
-    body {
+    main {
         font-size: 1.5em;
     }
     
