@@ -146,10 +146,17 @@ window.addEventListener('load', async () => {
                 <input type="text" placeholder="Nom - Prénom">
                 <input type="email" placeholder="Adresse mail">
                 <input type="text" placeholder="Votre message">
-                <button type="submit">Envoyer</button>
+                <button id="sendButton" type="submit">Envoyer</button>
                 <img src="./assets/contact_img.png" alt="Emma de The Promised Neverland vous remercie de votre message">
             </form>`
+
+            const sendButton = document.getElementById('sendButton');
+            sendButton.addEventListener("click", () => {
+                displayLandingPage();
+                alert("Votre message a bien été envoyé !")}
+            )
     }
+
 
     //------------Presentation Page ------------------
     /**
