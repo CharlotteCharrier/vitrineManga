@@ -11,6 +11,16 @@ window.addEventListener('load', async () => {
     let presentationPageBtn = document.querySelector('.presentation');
     let menuBurger = document.getElementById('menu-toggle');
 
+    /**
+     * Check the validity of an email input form
+     * @param {*} email 
+     * @returns 
+     */
+    const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     //------------Listeners---------------
     /**
      * Listen for focusout event on the menu burger icon to close the menu if focus moves outside
@@ -142,20 +152,40 @@ window.addEventListener('load', async () => {
     const displayContactPage = () => {
         hydratePage.className = "contact";
         hydratePage.innerHTML =
-            `<form method="post">
-                <input type="text" placeholder="Nom - Prénom">
-                <input type="email" placeholder="Adresse mail">
-                <input type="text" placeholder="Votre message">
+            `<form id="contactForm" method="post">
+                <input id="fullName" type="text" placeholder="Nom - Prénom">
+                <input id="email" type="email" placeholder="Adresse mail">
+                <input id="message" type="text" placeholder="Votre message">
                 <button id="sendButton" type="submit">Envoyer</button>
                 <img src="./assets/contact_img.png" alt="Emma de The Promised Neverland vous remercie de votre message">
-            </form>`
-
-            const sendButton = document.getElementById('sendButton');
-            sendButton.addEventListener("click", () => {
-                displayLandingPage();
-                alert("Votre message a bien été envoyé !")}
-            )
+            </form>`;
+    
+        const sendButton = document.getElementById('sendButton');
+        sendButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+    
+            // get the inputs
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            // Check if inputs are empty
+            if (!fullName || !email || !message) {
+                alert("Veuillez remplir tous les champs du formulaire.");
+                return; 
+            }
+            
+            // Check  email format with regex
+            if (!isValidEmail(email)) {
+                alert("Veuillez entrer une adresse email valide.");
+                return;
+            }
+            
+            displayLandingPage();
+            alert("Votre message a bien été envoyé !");
+        });
     }
+    
 
 
     //------------Presentation Page ------------------
